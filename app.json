@@ -2,13 +2,14 @@
   "expo": {
     "name": "EatJUIT",
     "slug": "rnEatJUIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#fce2e2"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -28,7 +29,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.EatJUIT.DhabaDelivery"
+      "package": "com.rnEatJUIT.rnEatJUIT"
     },
     "web": {
       "favicon": "./assets/favicon.png"

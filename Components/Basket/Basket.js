@@ -20,7 +20,7 @@ import { ArrowRightIcon, ArrowRightOnRectangleIcon, ShoppingCartIcon } from "rea
 const Basket = () => {
   
   const dispatch = useDispatch();
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
   let items = useSelector(selectBasketItems);
   const total = useSelector(selectBasketTotal);
   const [cart, setCart] = useState([]);
@@ -67,7 +67,9 @@ const Basket = () => {
         <View className="flex-row items-between justify-between pr-3 pl-3"><Text className="text-base text-[#00000038]">GST(5%)</Text><Text className="text-base text-[#00000038]">+ {(5*total)/100}</Text></View>
         <View className="flex-row items-between justify-between pr-3 pl-3"><Text className="text-base text-[#00000038]">Delivery Charges</Text><Text className="text-base text-[#00000038]">+ 70.00</Text></View>
         <View className="flex-row items-center justify-between pr-3 pl-3 pt-1 border-[#0000002f] border-t-[1px]"><Text className="text-2xl text-[#ffffff] font-bold">SubTotal</Text><Text className="text-2xl text-[#ffffff] font-bold">₹ {((5*total)/100) + 70 + total}</Text></View>
-        <TouchableOpacity className="flex-row items-center justify-center"><Text className="bg-[#157A17] p-2 pl-4 pr-4 font-bold text-lg rounded-lg text-[#ffffff]">Continue to Payment</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => {
+                navigation.navigate("PreparingOrderScreen");
+              }} className="flex-row items-center justify-center"><Text className="bg-[#157A17] p-2 pl-4 pr-4 font-bold text-lg rounded-lg text-[#ffffff]">Continue to Payment</Text></TouchableOpacity>
       </View>
     </SafeAreaView>
   );
